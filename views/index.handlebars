@@ -1,0 +1,57 @@
+<div class="jumbotron jumbotron-fluid" id="jumbotron">
+  <div class="container" id="header">
+    <h1 class="display-4">Burger Time!</h1>
+    <p class="lead">Choose a burger or make a burger,<br> then devour it!</p>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+        <h2 class="menu">Burger Menu</h2>
+        {{!-- <ul class="menu"> --}}
+          {{#each burgers}}
+            {{#unless this.devoured}}
+            {{!-- <li> --}}
+              <br><img src="./assets/images/forksm.png" class="eatBurger" data-id={{this.id}}></a>
+              {{this.id}}
+              {{this.burger_name}}
+                </form>
+              {{!-- </li> --}}
+            {{/unless}}
+          {{/each}}
+        {{!-- </ul> --}}
+    </div>
+    <div class="col-md-6">
+        <h2 class="menu">Burgers Devoured</h2>
+        {{!-- <ul> --}}
+          {{#each burgers}}
+            {{#if this.devoured}}
+            {{!-- <li> --}}
+              <br><img src="./assets/images/devouredsm.png" class="delBurger" data-id={{this.id}}></a>
+              {{this.id}}
+              {{this.burger_name}}
+            {{!-- </li> --}}
+            {{/if}}
+          {{/each}}
+        {{!-- </ul> --}}
+        
+      </div>
+    </div>
+
+  <div class="row">
+    <div class="col-12 form" >
+        <h2 class="menu">Create your own Burger:</h2>
+        <form class="create-update-form">
+
+          <div class="form-group newBurger">
+            <img src="./assets/images/grillsm.png" id class="grill"></a>
+            <input type="text" id="newBurger" name="burger_name" value="">
+          </div>
+
+          <button type="submit" class="btn btn-warning" id="create">Create Burger</button>
+        </form>
+      </div>
+    </div>
+
+</div>
